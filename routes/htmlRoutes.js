@@ -11,13 +11,9 @@ module.exports = function(app) {
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  //tinyMCE testing page reoute; this is just a sample for the proof of concept at the moment.
+  app.get("/tiny-test", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/tiny-test.html"));
   });
 
   // Render 404 page for any unmatched routes
