@@ -31,6 +31,17 @@ module.exports = function(app) {
     });
   });
 
+  // GET route for one entry (used for edits)
+  app.get("/api/entries/:id", function(req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(entry) {
+      res.json(entry);
+    });
+  });
+
   // POST route for entries
   app.post("/api/entries", function(req, res) {
     /* req.body should contain the following:

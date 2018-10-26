@@ -60,14 +60,41 @@ $(document).ready(function() {
     openSketch();
   });
 
+  //=======================================================================================
+  // GET ALL ENTRIES BY USER
+  // This placeholder code uses the user with an id of 1,
+  // obviously adjustments should be made to allow for the current active user, once that table exists.
+  // Additionally, the append will need to be adjusted to look nicer with our format.
+  // We may want to conside usng Moment or something of the sort to dsplay the time that the entry was written
   $.ajax({
     url: "/api/entries/1",
     method: "GET"
   }).then(entries => {
     entries.forEach(entry => {
       $("#testEntries").append(
-        `<h2> ${entry.title} </h2> ${entry.contents} <hr />`
+        `<div class="row justify-content-between">
+        <div class="col"><h2> ${entry.title} </h2></div>
+        <div class="col text-right">
+        <button class="btn edit-btn" data-entryId=${entry.id}>
+        <i class="fas fa-pencil-alt"></i>
+        </button>
+        <button class="btn delete-btn" data-entryId=${entry.id}>
+        <i class="fas fa-trash"></i>
+        </button>
+        </div>
+        </div>
+        ${entry.contents} <hr />`
       );
+    });
+  });
+
+  $(document).on("click", ".delete-btn", function() {
+    const entryId = $(this).attr("data-entryId");
+    $.ajax({
+      url: `/api/entries/${entryId}`,
+      method: "DELETE"
+    }).then(response => {
+      console.log(response);
     });
   });
 });
