@@ -12,6 +12,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  //load entry page
+  app.get("/entry", function(req,res){
+    res.sendFile(path.join(__dirname, "../public.entry.html"));
+  });
+
   
 
   //app.get("/", function(req, res) {
