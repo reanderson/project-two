@@ -19,7 +19,7 @@ module.exports = function(app) {
 
   //load entry page
   app.get("/entry", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public.entry.html"));
+    res.sendFile(path.join(__dirname, "../public/entry.html"));
   });
 
   // Render 404 page for any unmatched routes

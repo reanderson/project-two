@@ -1,6 +1,8 @@
 var db = require("../models");
 var cloudinary = require("cloudinary");
 
+require("dotenv").config();
+
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.CLOUDINARY_KEY,
@@ -19,7 +21,7 @@ module.exports = function(app) {
   });
 
   // GET route for all entries by user
-  app.get("/api/entries/:userId", function(req, res) {
+  app.get("/api/entries/user/:userId", function(req, res) {
     const query = {
       UserId: req.params.userId
     };
@@ -33,7 +35,7 @@ module.exports = function(app) {
 
   // GET route for one entry (used for edits)
   app.get("/api/entries/:id", function(req, res) {
-    db.Post.findOne({
+    db.Entry.findOne({
       where: {
         id: req.params.id
       }

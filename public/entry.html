@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-<link rel="stylesheet" href="style.css">
-<title>Entry Page</title>
-</head>
-<body>
-  
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="styles/entry.css">
+  <title>Entry Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        Entry Title:
+        <input type="text" class="form-control" id="title" placeholder="Title">
+      </div>
+    </form>
+
+    Entry Contents:
+    <textarea id="contents">
+
+    </textarea>
+
+    <div class="text-right mt-3">
+      <button class="btn btn-secondary" id="submitEntry" type="submit">Submit Entry</button>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="/painterro-0.2.68/wp/tags/0.2.21.1/painterro-0.2.21.min.js"></script>
+  <script src="/painterro-0.2.68/wp/tags/0.2.21.1/painterro-0.2.21.min.js"></script>
+  <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+  <script src="js/entry.js"></script>
 </body>
+
 </html>
