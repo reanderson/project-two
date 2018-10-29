@@ -4,7 +4,7 @@ var path = require("path");
 module.exports = function(app) {
   //load login page
   app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "/public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   // Load index page
