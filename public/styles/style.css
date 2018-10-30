@@ -5,16 +5,51 @@ body, html {
 
 body {
   
-  background-image: radial-gradient(rgba(9, 33, 58, 0.966), 
-   rgba(7, 17, 63, 0.589));
+  background: url('../img/milky-way-984050_1920.jpg');
 }
 
 .bg-dark {
+  
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../img/milky-way-984050_1920.jpg') !important;
+  background-repeat: no-repeat;
+  margin:0px;
 }
+/* Personal Space logo */
+.circle-text {
+  display: table-cell;
+  height: 50px; /*change this and the width
+  for the size of your initial circle*/
+  width: 170px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  /*make it pretty*/
+  background: #000;
+  color: #fff;
+  font-family: 'Codystar', cursive; /*change this
+  for font-size and font-family*/
+  border-style: solid;
+  border-color: #fff;
+  border-width: medium;
+  font-size: 15px;
+  text-transform: lowercase;
+  }
+
+.jumbotron-fluid {
+  background: url('../img/milky-way-984050_1920.jpg');
+}
+
+
+
 h1 {
   font-family: 'Comfortaa', cursive;
   font-size: 70px;
+  margin-top: -40px;
+  color: white;
+}
+
+p{
+  color: white;
 }
 
 #entryContent {
@@ -100,4 +135,14 @@ h1 {
 .selectedImage {
   border: 5px solid;
   border-color: red;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../img/milky-way-984050_1920.jpg'); */
+  color: white;
+  text-align: center;
 }
