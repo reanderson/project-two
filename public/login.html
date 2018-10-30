@@ -27,39 +27,39 @@
               <div id="signup">   
                 <h3>Sign Up for Free</h3>
                 
-                <form action="/" method="post">
+                <form id="signup" name="signup" method="post" action="/signup">
                 
                 <div class="top-row">
                   <div class="field-wrap">
-                    <label>
-                      First Name<span class="req">*</span>
+                    <label for="email">
+                      Email Address<span class="req">*</span>
                     </label>
-                    <input type="text" required autocomplete="off" />
+                    <input class="text" required autocomplete="off" name="email" type="email"/>
                   </div>
               
                   <div class="field-wrap">
-                    <label>
-                      Last Name<span class="req">*</span>
+                    <label for="firstname">
+                      First Name<span class="req">*</span>
                     </label>
-                    <input type="text"required autocomplete="off"/>
+                    <input name="firstname" type="text"required autocomplete="off"/>
                   </div>
                 </div>
       
                 <div class="field-wrap">
-                  <label>
-                    Email Address<span class="req">*</span>
+                  <label for="lastname">
+                    Last Name<span class="req">*</span>
                   </label>
-                  <input type="email"required autocomplete="off"/>
+                  <input name="lastname" type="text"required autocomplete="off"/>
                 </div>
                 
                 <div class="field-wrap">
-                  <label>
+                  <label for="password">
                     Set A Password<span class="req">*</span>
                   </label>
-                  <input type="password"required autocomplete="off"/>
+                  <input name="password" type="password" required autocomplete="off"/>
                 </div>
                 
-                <button type="submit" class="button button-block"/>Get Started</button>
+                <input class="button button-block" type="submit" value="Sign Up" />
                 
                 </form>
       
