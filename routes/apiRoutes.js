@@ -21,6 +21,7 @@ module.exports = function(app) {
   });
 
   // GET route for all entries by user
+  // THIS MAY NEED TO BE CHANGED ONCE PASSPORT IS IMPLEMENTED
   app.get("/api/entries/user/:userId", function(req, res) {
     const query = {
       UserId: req.params.userId

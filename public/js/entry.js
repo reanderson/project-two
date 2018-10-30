@@ -66,11 +66,15 @@ $(document).ready(function() {
         data: request
       }).then(response => {
         console.log(response);
+        window.location.href = "/";
       });
     }
 
     // if this is a new entry, run a POST route
     else {
+      if ($("#title").val().length === 0) {
+        return false;
+      }
       const request = {};
       request.contents = tinyMCE.get("contents").getContent();
       request.title = $("#title").val();
@@ -81,6 +85,7 @@ $(document).ready(function() {
         data: request
       }).then(response => {
         console.log(response);
+        window.location.href = "/";
       });
     }
   });
