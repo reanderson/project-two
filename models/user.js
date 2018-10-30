@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Sequelize) {
-  var User = sequelize.define('user', {
+  var User = sequelize.define("user", {
     id: {
       autoIncrement: true,
       primaryKey: true,
@@ -33,11 +33,10 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.DATE
     },
     status: {
-      type: Sequelize.ENUM('active', 'inactive'),
-      defaultValue: 'active'
+      type: Sequelize.ENUM("active", "inactive"),
+      defaultValue: "active"
     }
   });
 
   return User;
-  
-}
+};

@@ -39,6 +39,6 @@
             "error",
             "always"
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "warn"
     }
 }

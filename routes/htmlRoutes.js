@@ -12,14 +12,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  //tinyMCE testing page reoute; this is just a sample for the proof of concept at the moment.
-  app.get("/tiny-test", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/tiny-test.html"));
-  });
-
   //load entry page
   app.get("/entry", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/entry.html"));
   });
-
 };
