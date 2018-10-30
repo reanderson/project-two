@@ -5,10 +5,13 @@ body, html {
 
 body {
   
-  background-image: radial-gradient( rgb(177, 168, 149), 
-   rgb(90, 87, 80));
+  background-image: radial-gradient(rgba(9, 33, 58, 0.966), 
+   rgba(7, 17, 63, 0.589));
 }
 
+.bg-dark {
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../img/milky-way-984050_1920.jpg') !important;
+}
 h1 {
   font-family: 'Comfortaa', cursive;
   font-size: 70px;

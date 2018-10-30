@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <link href="https://fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Julius+Sans+One|Lato" rel="stylesheet">
-<link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="../public/styles/style.css">
 <title>Entry Page</title>
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <a class="navbar-brand" href="#"></a>
@@ -42,29 +40,25 @@
 
 </div>
 
-<div class="row mr-0">
+<div class="row">
   <div class="col-md-6 offset-md-3">
     <form id="cms">
       <div class="form-group">
         <label for="title">Title:</label>
-        <input placeholder="Entry Title" type="text" class="form-control" id="title">
+        <input placeholder="Post Title" type="text" class="form-control" id="title">
         <br />
-        <label for="contents">Body:</label>
-        <textarea placeholder="Entry Body" class="form-control" rows="10" id="contents"></textarea>
+        <label for="body">Body:</label>
+        <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
         <br />
-        <button type="submit" class="btn btn-success submit" id="submitEntry">Submit</button>
+        <button type="submit" class="btn btn-success submit">Submit</button>
       </div>
     </form>
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="/painterro-0.2.68/wp/tags/0.2.21.1/painterro-0.2.21.min.js"></script>
-<script src="/painterro-0.2.68/wp/tags/0.2.21.1/painterro-0.2.21.min.js"></script>
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=13tbetnu49auprb9j69yo1x7xy6u972c55b42q13xk1xvssu"></script>
-<script src="js/entry.js"></script>
+<script src = "/public/js/entry.js"></script>
 </body>
-
 </html>
