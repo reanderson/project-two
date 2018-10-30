@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
@@ -83,15 +84,17 @@ html {
 
 a {
   text-decoration: none;
-  color: #981ab1b0;
+  color: #d12df1e1;
   transition: .5s ease;
+  /* font-size: x-large; */
+  font-weight: bold;
 }
-a:hover {
+
+ a:hover {
   color: #981ab1b0;
 }
 
 .form {
-  
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
@@ -123,7 +126,7 @@ a:hover {
   transition: .5s ease;
 }
 .tab-group li a:hover {
-  background: #981ab1b0;
+  background: #4c0c58d7;
   color: #ffffff;
 }
 .tab-group .active a {
@@ -237,7 +240,7 @@ textarea {
   -webkit-appearance: none;
 }
 .button:hover, .button:focus {
-  background: #981ab1b0;
+  background: #4c0c58d7;
 }
 
 .button-block {

@@ -1,4 +1,4 @@
-$(".preloader").fadeOut(4000, function() {
+$(".preloader").fadeOut(2000, function() {
   $(".content").fadeIn(1000);
 })
 
@@ -19,4 +19,18 @@ $('#register-form-link').click(function(e) {
   e.preventDefault();
 });
 
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
+});
 });
