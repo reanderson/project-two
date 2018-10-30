@@ -11,23 +11,45 @@
   <link rel="stylesheet" href="/styles/style.css">
 
   <title>Project One</title>
+
 </head>
-
 <body>
-
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>Journaly Journal</h1>
-      <p>For whatever thoughts you're thinking</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav md-2">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Entries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="jumbotron border-bottom border-dark">
+      
+    <div class="header">
+      <h1>Personal Space</h1>
+      <p>Put down your thoughts</p>
       <br>
       <button class="btn btn-outline-info btn-lg" id="callNewEntryModal">New Entry
       </button>
 
     </div>
+    
   </div>
 
 
 
+ <!-- 
+  Commenting  
   <div class="bg-dark text-light p-3 shadow">
     <div class="row justify-content-between align-items-center">
       <div class="col col-md-10">
@@ -39,7 +61,7 @@
         <button type="button" id="newQuote" class="btn btn-secondary btn-sm">New quote</button>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <br><br>
 
@@ -50,49 +72,23 @@
 
           <div class="btn-group-vertical">
 
-            <button type="button" class="btn btn-secondary" id="callSketch">Sketch Pad
+            <button type="button" class="btn btn-secondary" id="callSketch">Entries
             </button>
 
           </div>
           <ul class="list-group list-group-flush shadow" id="entryButtons">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">#</li>
+            <li class="list-group-item">#</li>
+            <li class="list-group-item">#</li>
           </ul>
 
         </div>
       </div>
 
 
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header bg-secondary">
-
-
-
-
-            <form class="form-inline">
-              <div class="form-group mt-2">
-                <button type="button" class="btn btn-outline-light shadow mx-1" id="callNewTextModal">
-                  Add Text Content
-                </button>
-
-                <button type="button" class="btn btn-outline-light shadow mx-1" id="newDivider">Add Divider</button>
-
-
-
-                <input type="text" class="form-control mx-1" id="search-input" placeholder="Search for a GIF">
-
-                <button type="submit" class="btn btn-outline-light shadow mx-1" id="searchButton" data-toggle="modal"  data-target=".bd-example-modal-lg">Search
-                    Image</button>
-              </div>
-            </form>
-
-
-          </div>
-          <div class="card-body shadow" id="entryContent">
-          </div>
-        </div>
+      <div class="col-md-8" id= "entryContent">
+        
+      </div>
   </main>
 
   <br><br><br>
@@ -100,137 +96,7 @@
   <footer class="footer bg-dark text-center text-secondary">© 2018 Copyright</footer>
 
   <!-- MODALS -->
-  <!-- New Entry Modal -->
-  <div class="modal fade" id="newEntryModal" tabindex="-1" role="dialog" aria-labelledby="newEntryModalTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="newEntryModalTitle">Make a New Entry</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form>
-          <div class="modal-body">
 
-            <label for="entry-title">Entry Title</label>
-            <input type="text" class="form-control" id="entry-title" placeholder="Entry Title">
-            <div class="text-danger small validation"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" id="submitNewEntry">Create Entry</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- End New Entry Modal -->
-
-  <!-- New Text Modal -->
-  <div class="modal fade" id="newTextModal" tabindex="-1" role="dialog" aria-labelledby="newTextModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="newTextModalTitle">Add Text to Entry</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <select class="custom-select my-1" id="colorSelect">
-              <option selected>Select Font Color</option>
-              <option value="black">Black</option>
-              <option value="white">White</option>
-              <option value="grey">Grey</option>
-              <option value="red">Red</option>
-              <option value="orange">Orange</option>
-              <option value="yellow">Yellow</option>
-              <option value="green">Green</option>
-              <option value="blue">Blue</option>
-              <option value="purple">Purple</option>
-              <option value="brown">Brown</option>
-              <option value="pink">Pink</option>
-            </select>
-
-            <select class="custom-select my-1" id="alignmentSelect">
-              <option selected>Select Text Alignment</option>
-              <option value="left">Left</option>
-              <option value="center">Center</option>
-              <option value="right">Right</option>
-            </select>
-
-            <label for="newTextContent">Enter Text Content</label>
-            <textarea class="form-control" id="newTextContent" placeholder="Text" rows="5"></textarea>
-            <div class="text-danger small validation"></div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="submitNewText">Add Text</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End New Text Modal -->
-
-  <!-- Edit Text Modal -->
-  <div class="modal fade" id="editTextModal" tabindex="-1" role="dialog" aria-labelledby="editTextModalTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editTextModalTitle">Text Content Options</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="editTextOptions">
-
-          <select class="custom-select my-1" id="colorChangeSelect">
-            <option selected>Select New Font Color</option>
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="grey">Grey</option>
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="purple">Purple</option>
-            <option value="brown">Brown</option>
-            <option value="pink">Pink</option>
-          </select>
-
-          <select class="custom-select my-1" id="alignmentChangeSelect">
-            <option selected>Select Text Alignment</option>
-            <option value="left">Left</option>
-            <option value="green">Center</option>
-            <option value="right">Right</option>
-          </select>
-
-
-          <label for="contentText">Edit Text</label>
-          <textarea class="form-control" id="contentText" placeholder="Text" rows="5"></textarea>
-          <div class="text-danger small validation"></div>
-        </div>
-        <div class="modal-body">
-          <div class="row justify-content-between">
-            <div class="col">
-              <button type="button" class="btn btn-danger deleteBtn">Delete Content</button>
-            </div>
-            <div class="col text-right">
-              <button type="button" class="btn btn-secondary" id="closeEditModal">Close</button>
-              <button type="button" class="btn btn-primary" id="saveEdits">Save Changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Edit Text Modal -->
 
   <!-- Delete Entry Modal -->
   <div class="modal fade" id="deleteEntryModal" tabindex="-1" role="dialog" aria-labelledby="deleteEntryModalTitle"
@@ -290,62 +156,7 @@
   </div>
   <!-- end delete divider modal -->
 
-  <!-- Edit Title Modal -->
-  <div class="modal fade" id="editTitleModal" tabindex="-1" role="dialog" aria-labelledby="editTitleModalTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="editTitleModalTitle">Change Entry Title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <form>
-          <div class="modal-body">
-
-            <label for="newTitleEntry">Entry Title</label>
-            <input type="text" class="form-control" id="newTitleEntry" placeholder="Entry Title">
-            <div class="text-danger small validation"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" id="submitNewTitle">Change Title</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- End Edit Title Modal -->
-
-  <!-- Image Seach Modal -->
-  <div class="modal fade bd-example-modal-lg" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="row" id="row1">
-          <div class="col-4 mt-3 pl-5 returnedPic" id="returned1"></div>
-          <div class="col-4 mt-3 returnedPic" id="returned2"></div>
-          <div class="col-4 mt-3 returnedPic" id="returned3"></div>
-        </div>
-        <div class="row" id="row2">
-          <div class="col-4 mt-3 pl-5 returnedPic" id="returned4"></div>
-          <div class="col-4 mt-3 returnedPic" id="returned5"></div>
-          <div class="col-4 mt-3 returnedPic" id="returned6"></div>
-        </div>
-        <div class="row" id="row3">
-          <div class="col-4 mt-3 mb-3 pl-5 returnedPic" id="returned7"></div>
-          <div class="col-4 mt-3 mb-3 returnedPic" id="returned8"></div>
-          <div class="col-4 mt-3 mb-3 returnedPic" id="returned9"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="addImageButton" data-dismiss="modal">Add Image</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
 
   <script src="assets/painterro-0.2.68/wp/tags/0.2.21.1/painterro-0.2.21.min.js"></script>
 

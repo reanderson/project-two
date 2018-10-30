@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // Gets an optional query string from our url (i.e. ?post_id=23)
   var url = window.location.search;
   var entryId;
   // Sets a flag for whether or not we're updating a post to be false initially
