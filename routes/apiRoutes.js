@@ -22,9 +22,9 @@ module.exports = function(app) {
 
   // GET route for all entries by user
   // THIS MAY NEED TO BE CHANGED ONCE PASSPORT IS IMPLEMENTED
-  app.get("/api/entries/user/:userId", function(req, res) {
+  app.get("/api/entries", function(req, res) {
     const query = {
-      UserId: req.params.userId
+      userId: req.user.id
     };
 
     db.Entry.findAll({
@@ -51,7 +51,9 @@ module.exports = function(app) {
     req.body.UserId: the ID of the user
     req.body.contents: the HTML content of the entry
     req.body.title: the title of the entry */
-    db.Entry.create(req.body).then(function(response) {
+    const newEntry = req.body;
+    newEntry.userId = req.user.id;
+    db.Entry.create(newEntry).then(function(response) {
       res.json(response);
     });
   });

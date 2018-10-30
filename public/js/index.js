@@ -7,15 +7,14 @@ $(document).ready(function() {
   const entryFooter = $("<div>").addClass("card-footer");
 
   //UPDATE THIS LATER TO REFLECT LOGIN FUNCTIONALITY
-  let userId = 1;
 
   //GET ALL ENTRIES BY USER
   //and then make entry buttons for them
-  function getAllEntries(userId) {
+  function getAllEntries() {
     $.ajax({
       // THIS WILL PROBABLY NEED TO BE CHANGED ONCE PASSPORT IS IMPLEMENTED
       type: "GET",
-      url: "/api/entries/user/" + userId
+      url: "/api/entries/"
     }).then(entries => {
       console.log(entries);
       entryList.empty();
@@ -136,7 +135,7 @@ $(document).ready(function() {
       //remove the id to the deleteEntry button
       $("#deleteEntry").attr("data-id", "-1");
 
-      getAllEntries(userId);
+      getAllEntries();
 
       $("#deleteEntryModal").modal("hide");
 
@@ -152,5 +151,5 @@ $(document).ready(function() {
     });
   });
 
-  getAllEntries(userId);
+  getAllEntries();
 });

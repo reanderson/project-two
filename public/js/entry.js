@@ -78,7 +78,7 @@ $(document).ready(function() {
       const request = {};
       request.contents = tinyMCE.get("contents").getContent();
       request.title = $("#title").val();
-      request.UserId = 1;
+      request.userId = 1;
       $.ajax({
         url: "/api/entries",
         method: "POST",
