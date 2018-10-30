@@ -18,15 +18,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // Entry.associate = function(models) {
-  //   // We're saying that an Entry should belong to a User
-  //   // An Entry can't be created without an Author due to the foreign key constraint
-  //   Entry.belongsTo(models.User, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
+  Entry.associate = function(models) {
+    // We're saying that an Entry should belong to a User
+    // An Entry can't be created without an Author due to the foreign key constraint
+    Entry.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Entry;
 };
