@@ -1,3 +1,7 @@
+$(".preloader").fadeOut(4000, function() {
+  $(".content").fadeIn(1000);
+})
+
 $(function() {
 
   $('#login-form-link').click(function(e) {
