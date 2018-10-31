@@ -1,45 +1,50 @@
-
-body, html {
+body,
+html {
   height: 100%;
 }
 
 body {
-  
   background: url('../img/milky-way-984050_1920.jpg');
 }
 
 .bg-dark {
-  
-  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../img/milky-way-984050_1920.jpg') !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/milky-way-984050_1920.jpg') !important;
   background-repeat: no-repeat;
-  margin:0px;
+  margin: 0px;
 }
+
 /* Personal Space logo */
 .circle-text {
   display: table-cell;
-  height: 50px; /*change this and the width
+  height: 50px;
+  /*change this and the width
   for the size of your initial circle*/
-  width: 170px;
+  width: 150px;
   text-align: center;
   vertical-align: middle;
   border-radius: 50%;
   /*make it pretty*/
   background: #000;
   color: #fff;
-  font-family: 'Codystar', cursive; /*change this
+  font-family: 'Codystar', cursive;
+  /*change this
   for font-size and font-family*/
   border-style: solid;
   border-color: #fff;
   border-width: medium;
-  font-size: 15px;
+  font-size: 10px;
   text-transform: lowercase;
-  }
+}
+
+.nav-link:hover {
+  color: GhostWhite !important;
+  transition: .1s ease;
+
+}
 
 .jumbotron-fluid {
   background: url('../img/milky-way-984050_1920.jpg');
 }
-
-
 
 h1 {
   font-family: 'Comfortaa', cursive;
@@ -48,7 +53,7 @@ h1 {
   color: white;
 }
 
-p{
+p {
   color: white;
 }
 
@@ -63,7 +68,7 @@ p{
 }
 
 .hero-image {
-  
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/black-coffee-2847957_1920.jpg");
 
   height: 50%;
