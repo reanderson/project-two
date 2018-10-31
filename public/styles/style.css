@@ -57,11 +57,6 @@ p {
   color: white;
 }
 
-#entryContent {
-  /* This is needed in order to make line breaks typed into new text appear as new lines as opposed to just all mashing together. */
-  white-space: pre-wrap;
-}
-
 #dailyquote {
   font-family: 'Lato', sans-serif;
   font-size: 16px
@@ -78,7 +73,7 @@ p {
   position: relative;
 }
 
-.hero-text {
+.header {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -87,60 +82,6 @@ p {
   color: white;
 }
 
-
-.black {
-  color: black;
-}
-
-.white {
-  color: white;
-}
-
-.grey {
-  color: grey;
-}
-
-.red {
-  color: red;
-}
-
-.orange {
-  color: orange;
-}
-
-.yellow {
-  color: yellow;
-}
-
-.green {
-  color: green;
-}
-
-.blue {
-  color: blue;
-}
-
-.purple {
-  color: purple;
-}
-
-.brown {
-  color: brown;
-}
-
-.pink {
-  color: pink;
-}
-
-.contentDivider {
-  border: 1px solid #555555;
-  opacity: 0.5;
-}
-
-.selectedImage {
-  border: 5px solid;
-  border-color: red;
-}
 
 .footer {
   position: fixed;
