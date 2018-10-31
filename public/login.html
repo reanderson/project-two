@@ -31,24 +31,24 @@
             
             <!-- Signup form -->
             <div class="tab-content">
-              <div id="signup">   
+              <div>   
                 <h3>Sign Up for Free</h3>
                 
-                <form id="signup" name="signup" method="post" action="/signup">
+                <form name="signup">
                 
                 <div class="top-row">
                   <div class="field-wrap">
                     <label for="email">
                       Email Address<span class="req">*</span>
                     </label>
-                    <input class="text" required autocomplete="off" name="email" type="email"/>
+                    <input class="text" required autocomplete="off" name="email" type="email" id="signupEmail"/>
                   </div>
               
                   <div class="field-wrap">
                     <label for="firstname">
                       First Name<span class="req">*</span>
                     </label>
-                    <input name="firstname" type="text"required autocomplete="off"/>
+                    <input name="firstname" type="text"required autocomplete="off" id="firstname"/>
                   </div>
                 </div>
       
@@ -56,17 +56,19 @@
                   <label for="lastname">
                     Last Name<span class="req">*</span>
                   </label>
-                  <input name="lastname" type="text"required autocomplete="off"/>
+                  <input name="lastname" type="text"required autocomplete="off" id="lastname"/>
                 </div>
                 
                 <div class="field-wrap">
                   <label for="password">
                     Set A Password<span class="req">*</span>
                   </label>
-                  <input name="password" type="password" required autocomplete="off"/>
+                  <input name="password" type="password" required autocomplete="off" id="signupPassword"/>
                 </div>
+
+                <p class="small text-danger" id="signupError"></p>
                 
-                <input class="button button-block" type="submit" value="Sign Up" />
+                <input class="button button-block" type="submit" value="Sign Up" id="signup"/>
                 
                 </form>
       
