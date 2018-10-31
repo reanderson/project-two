@@ -5,6 +5,9 @@ body, html {
 
 body {
   background: url('../img/milky-way-984050_1920.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .bg-dark {
@@ -58,7 +61,7 @@ p{
 
 .jumbotron {
   
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/black-coffee-2847957_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   height: 50%;
   background-position: center;
