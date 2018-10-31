@@ -1,3 +1,7 @@
+$(".preloader").fadeOut(2000, function() {
+  $(".content").fadeIn(1000);
+});
+
 $(function() {
   $("#login-form-link").click(function(e) {
     $("#login-form")
@@ -16,5 +20,22 @@ $(function() {
     $("#login-form-link").removeClass("active");
     $(this).addClass("active");
     e.preventDefault();
+  });
+
+  $(".tab a").on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .parent()
+      .addClass("active");
+    $(this)
+      .parent()
+      .siblings()
+      .removeClass("active");
+    target = $(this).attr("href");
+
+    $(".tab-content > div")
+      .not(target)
+      .hide();
+    $(target).fadeIn(600);
   });
 });
