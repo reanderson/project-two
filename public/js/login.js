@@ -39,7 +39,7 @@ $(function() {
     $(target).fadeIn(600);
   });
 
-  $("#login").on("click", function(event) {
+  $("#loginBtn").on("click", function(event) {
     event.preventDefault();
     const userInfo = {};
     userInfo.email = $("#userEmail").val();
