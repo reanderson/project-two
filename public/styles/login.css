@@ -27,7 +27,7 @@ body, html {
   /* color: white; */
   
   /* Background styles */
-   background: radial-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../img/milky-way-984050_1920.jpg'); 
+   background: radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url('../img/milky-way-984050_1920.jpg'); 
   background-size: cover;
   background-position: center center;
   background-repeat: space;
@@ -83,11 +83,11 @@ html {
 
 
 a {
-  text-decoration: none;
+  text-decoration: purple;
   color: #d12df1e1;
-  transition: .5s ease;
-  /* font-size: x-large; */
-  font-weight: bold;
+  /* transition: .5s ease; */
+  font-size: large;
+  font-weight: bolder;
 }
 
  a:hover {
