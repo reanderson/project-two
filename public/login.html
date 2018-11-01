@@ -31,33 +31,44 @@
             
             <!-- Signup form -->
             <div class="tab-content">
-              <div id="signup">   
+              <div>   
                 <h3>Sign Up for Free</h3>
-                <br>
-                <form action="/" method="post">
+                
+                <form name="signup">
                 
                 <div class="top-row">
                   <div class="field-wrap">
-                    <input type="text" placeholder="First Name" required autocomplete="off" />
+                    <label for="email">
+                      <span class="req">*</span>
+                    </label>
+                    <input placeholder = "Email Address" class="text" required autocomplete="off" name="email" type="email" id="signupEmail"/>
                   </div>
               
                   <div class="field-wrap">
-                    
-                    <input type="text" placeholder="Last Name" required autocomplete="off"/>
+                    <label for="firstname">
+                      <span class="req">*</span>
+                    </label>
+                    <input placeholder = "First Name" name="firstname" type="text"required autocomplete="off" id="firstname"/>
                   </div>
                 </div>
       
                 <div class="field-wrap">
-                  
-                  <input type="email" placeholder="Email Address" required autocomplete="off"/>
+                  <label for="lastname">
+                    <span class="req">*</span>
+                  </label>
+                  <input placeholder ="Last Name" name="lastname" type="text"required autocomplete="off" id="lastname"/>
                 </div>
                 
                 <div class="field-wrap">
-                  
-                  <input type="password" placeholder= "Set a Password" required autocomplete="off"/>
+                  <label for="password">
+                    <span class="req">*</span>
+                  </label>
+                  <input placeholder ="Set A Password" name="password" type="password" required autocomplete="off" id="signupPassword"/>
                 </div>
+
+                <p class="small text-danger" id="signupError"></p>
                 
-                <input class="button button-block" type="submit" value="Sign Up" />
+                <input class="button button-block" type="submit" value="Sign Up" id="signup"/>
                 
                 </form>
       
@@ -67,20 +78,25 @@
               <div id="login">   
                 <h3>Welcome Back!</h3>
                 
-                <form action="/" method="post">
+                <form>
                 
                   <div class="field-wrap">
-                  <input type="email" placeholder="Email Address"required autocomplete="off"/>
+                  <label>
+                    <span class="req">*</span>
+                  </label>
+                  <input placeholder="Email Address" type="email"required autocomplete="off" id="userEmail"/>
                 </div>
                 
                 <div class="field-wrap">
-                  
-                  <input type="password" placeholder="Password"required autocomplete="off"/>
+                  <label>
+                    <span class="req">*</span>
+                  </label>
+                  <input placeholder="Password" type="password"required autocomplete="off" id="userPassword"/>
                 </div>
                 
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
-                
-                <button class="button button-block"/>Log In</button>
+                <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
+                <p class="small text-danger" id="loginError"></p>
+                <button class="button button-block" id="loginBtn"/>Log In</button>
                 
                 </form>
       

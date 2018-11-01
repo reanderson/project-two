@@ -57,14 +57,14 @@ h1 {
   color: white;
 }
 
-
-
 #dailyquote {
   font-family: 'Lato', sans-serif;
   font-size: 16px
 }
 
 .jumbotron {
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* background-image: inherit(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
   height: 50%;
