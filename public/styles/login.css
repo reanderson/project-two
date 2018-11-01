@@ -93,7 +93,7 @@ a {
 }
 
  a:hover {
-  color: #b93fd1b0;
+  color: #b93fd1b0 !important;
 }
 
 .form {

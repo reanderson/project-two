@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $(".preloader").fadeOut(2000, function() {
+    $(".content").fadeIn(1000);
+  });
+  
   var url = window.location.search;
   var entryId;
   // Sets a flag for whether or not we're updating a post to be false initially

@@ -1,4 +1,10 @@
+
+
 $(document).ready(function() {
+
+  $(".preloader").fadeOut(2000, function() {
+    $(".content").fadeIn(1000);
+  });
   // Get references to page elements
   const entryList = $("#entryButtons");
   const entryDisplay = $("#entryContent");
